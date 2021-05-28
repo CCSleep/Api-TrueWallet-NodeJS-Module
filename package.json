@@ -1,0 +1,26 @@
+{
+  "name": "truemoney-code",
+  "version": "0.1.0",
+  "description": "Hi I Am TinnerKung or PernYren",
+  "dependencies": {
+    "events": "^3.3.0",
+    "request": "^2.88.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:TinnerKung/truemoney-code.git"
+  },
+  "keywords": [
+    "npm",
+    "TinnerKung",
+    "PernYren",
+    "Truemoney",
+    "codeTruemoney",
+    "kupong"
+  ],
+  "author": "TinnerKung",
+  "bugs": {
+    "url": "https://github.com/TinnerKung/truemoney-code/issues"
+  },
+  "homepage": "https://github.com/TinnerKung/TinnerKung/blob/main/README.md"
+}
