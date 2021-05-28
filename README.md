@@ -1,7 +1,7 @@
 # Api-TrueWallet-NodeJS-Module
-ใช้งานตัดคูปองวอเลทด้วย NodeJs และ มี Callback เพื่อการเขียนการแยกที่ง่ายขึ้น
+Wallet coupon clipping with NodeJs and callbacks for easier separation.
 
-วิธีการใช้งาน
+How To Use
 
 ```js
 const truemoney = require('./truemomey-code.js')
