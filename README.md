@@ -11,4 +11,38 @@ tw.on('message', data => {
     console.log(data) // Callback ออกมาเป็น Json
   })
 ```
+
+```js
+const truemoney = require('./truemomey-code.js')
+const tw = new truemoney('https://gift.truemoney.com/campaign/?v=[ โค๊ตคูปอง ]', '[เบอร์โทร]')
+
+tw.on('message', data => {
+      switch (data.status.code) {
+            case "SUCCESS":
+                  console.log('ไดรับเงินแล้วจำนวน'+data.data.voucher.amount_baht)
+                  break;
+            case "CANNOT_GET_OWN_VOUCHER":
+                  console.log('รับซองตัวเองไม่ได้')
+                  break;
+            case "TARGET_USER_NOT_FOUND":
+                  console.log('ไม่พบเบอร์นี้ในระบบ')
+                  break;
+            case "INTERNAL_ERROR":
+                  console.log('ไม่ซองนี้ในระบบ หรือ URL ผิด')
+                  break;
+            case "VOUCHER_OUT_OF_STOCK":
+                  console.log('มีคนรับไปแล้ว')
+                  break;
+            case "VOUCHER_NOT_FOUND":
+                  console.log('ไม่พบซองในระบบ')
+                  break;
+            case "VOUCHER_EXPIRED":
+                  console.log('ซองวอเลทนี้หมดอายุแล้ว')
+                  break;
+            default:
+                break;
+          }
+  })
+  
+```
 <img src="https://komarev.com/ghpvc/?username=TinnerKung&color=blueviolet" align="left">
