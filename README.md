@@ -1,12 +1,6 @@
 # Api-TrueWallet-NodeJS-Module
 Wallet coupon clipping with NodeJs and callbacks for easier separation.
 
-```
-> ประกาศบุคคลที่ห้ามใช้งาน หรือ บุคคลที่อยู่ในเครือ ดังนี้
-> ↳ 144 , TK , JKC , 4826 , STCSurvival , จารพี และเครื่อที่ร่วมกันทำ , เฟียวคุง และเครื่อที่ร่วมกันท , Mew Nathida Phaetkul และเครื่อที่ร่วมกันท
-> เนืองจากอยู่ในข่ายระงับการใช้งาน เพราะเหตุผลบางอย่าง
-```
-
 How To Use
 
 ```js
