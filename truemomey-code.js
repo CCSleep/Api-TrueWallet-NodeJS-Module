@@ -25,8 +25,8 @@ constructor(a, phone) {
       method: 'POST',
       json: true,
       body: requestData
-    }, (data) => {
-        this.emit('message',data);
+    }, (error, response, data) => {
+      this.emit('message',data)
     }).setHeader('Content-Type', 'application/json');
   }
 }
