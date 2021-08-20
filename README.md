@@ -13,10 +13,10 @@ tw.on('message', data => {
 ```
 
 ```js
-const truemoney = require('./truemomey-code.js')
-const tw = new truemoney('https://gift.truemoney.com/campaign/?v=[ โค๊ตคูปอง ]', '[เบอร์โทร]')
+const twApi = require('./truemomey-code.js')
+const twApi = new twApi('https://gift.truemoney.com/campaign/?v=[ โค๊ตคูปอง ]', '[เบอร์โทร]')
 
-tw.on('message', data => {
+twApi.on('message', data => {
       switch (data.status.code) {
             case "SUCCESS":
                   console.log('ไดรับเงินแล้วจำนวน'+data.data.my_ticket.amount_baht)
