@@ -1,6 +1,8 @@
 # Api-TrueWallet-NodeJS-Module
 Wallet coupon clipping with NodeJs and callbacks for easier separation.
 
+อับเดต ลด loop 3 ช่วง + เบาเหี้ยๆเบาสัสๆ
+
 How To Use
 
 ```js
