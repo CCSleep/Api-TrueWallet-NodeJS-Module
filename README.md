@@ -19,7 +19,7 @@ const tw = new truemoney('https://gift.truemoney.com/campaign/?v=[ โค๊ต�
 tw.on('message', data => {
       switch (data.status.code) {
             case "SUCCESS":
-                  console.log('ไดรับเงินแล้วจำนวน'+data.data.voucher.amount_baht)
+                  console.log('ไดรับเงินแล้วจำนวน'+data.data.my_ticket.amount_baht)
                   break;
             case "CANNOT_GET_OWN_VOUCHER":
                   console.log('รับซองตัวเองไม่ได้')
