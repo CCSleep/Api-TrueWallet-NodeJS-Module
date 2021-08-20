@@ -1,33 +1,18 @@
-var request = require('request');
-const {EventEmitter} = require('events')
-class truemoney extends EventEmitter {
-constructor(a, phone) {
-    super()
-    this.code = a
-    this.phones = phone
-    this.urlimput()
-  }
-  urlimput() {
-      var url = `${this.code}`
-      this.codeurl = url.replace("https://gift.truemoney.com/campaign/?v=","")
-      const urls = `https://gift.truemoney.com/campaign/vouchers/${this.codeurl}/redeem`;
-      this.request(urls, data => {
-        this.emit('json', data)
-      })
-  }
-   request(urls) {
-    var requestData = {
-        "mobile":`${this.phones}`,
-        "voucher_hash":`${this.codeurl}`
+let EventEmitter = require('events');
+class twApi extends EventEmitter {
+    constructor(UrlTrueWallet, PhoneNumber) {
+        super();
+        let UrlTrueWalletFull = 'https://gift.truemoney.com/campaign/';
+        let UrlTrueWalletReplace = UrlTrueWallet.replace(UrlTrueWalletFull + '?v=', "");
+        require('request').post({
+            url: UrlTrueWalletFull + 'vouchers/' + UrlTrueWalletReplace + '/redeem',
+            json: true,
+            body: ({
+                "mobile": PhoneNumber
+            })
+        }, (error, response, data) => {
+            this.emit('msg', data)
+        })
     }
-    request({
-      url: urls,
-      method: 'POST',
-      json: true,
-      body: requestData
-    }, (error, response, data) => {
-      this.emit('message',data)
-    }).setHeader('Content-Type', 'application/json');
-  }
 }
-module.exports = truemoney
+module.exports = twApi
